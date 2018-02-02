@@ -78,7 +78,7 @@
   </header>
 
   <nav role="navigation">
-    <ul class="site-nav">
+    <ul class="site-nav navbar-list">
       {% for link in linklists[section.settings.main_linklist].links %}
         {%- assign child_list_handle = link.title | handleize -%}
         {% if menus[child_list_handle].links != blank %}
@@ -96,7 +96,7 @@
             </ul>
           </li>
         {% else %}
-          <li {% if link.active %}class="site-nav--active"{% endif %}>
+          <li {% if link.active %}class="active"{% endif %}>
             <a href="{{ link.url }}" class="site-nav__link">{{ link.title }}</a>
           </li>
         {% endif %}
